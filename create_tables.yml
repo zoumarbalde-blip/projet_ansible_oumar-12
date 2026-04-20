@@ -1,0 +1,18 @@
+  GNU nano 7.2                                                                 create_tables.yml
+- name: Création des tables MySQL
+  hosts: dbservers
+  become: yes
+
+  tasks:
+
+    - name: Copier le fichier SQL sur la VM DB
+      copy:
+        src: schema.sql
+        dest: /tmp/schema.sql
+
+    - name: Importer le fichier SQL pour créer les tables
+      mysql_db:
+        name: population_db
+        state: import
+        target: /tmp/schema.sql
+        login_unix_socket: /var/run/mysqld/mysqld.sock
