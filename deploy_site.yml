@@ -1,0 +1,27 @@
+- name: Déploiement serveur web avec Apache, PHP et site connecté à la base de données
+  hosts: webservers
+  become: yes
+
+  tasks:
+
+  - name: Installer Apache + PHP + extensions MySQL
+    apt:
+      name:
+        - apache2
+        - php
+        - php-mysql
+      state: present
+      update_cache: yes
+
+  - name: Démarrer Apache
+    service:
+      name: apache2
+      state: started
+      enabled: yes
+
+  - name: Copier le site web PHP
+    copy:
+      src: index.php
+      dest: /var/www/html/index.php
+      mode: '0644'
+
