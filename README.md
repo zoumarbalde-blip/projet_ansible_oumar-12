@@ -27,4 +27,17 @@ ansible all -i inventory.ini -m ping
 ```
 <img width="943" height="352" alt="image" src="https://github.com/user-attachments/assets/134f041a-bf15-4893-a915-6f3ac081dc94" />
 
+#Application Web — Portail Administratif
+
+<img width="783" height="495" alt="image" src="https://github.com/user-attachments/assets/ef849ac3-6be9-4df2-be5d-918c85f65212" />
+
+
+<img width="657" height="492" alt="image" src="https://github.com/user-attachments/assets/4801f135-78d1-460a-b6e1-1928518952f1" />
+
+#Liste des Rendez-vous — Données en Base de Données
+<img width="1360" height="356" alt="image" src="https://github.com/user-attachments/assets/2adbb01a-f162-46c3-b5da-5074181d2653" />
+
+
+
+
 
